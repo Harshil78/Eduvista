@@ -1,0 +1,99 @@
+﻿
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create a column layout with Flexbox */
+.row {
+  display: flex;
+ 
+}
+
+/* Left column (menu) */
+.left {
+  flex: 50px;
+  padding: 15px 0;
+ 
+;
+}
+
+
+.left h2 {
+  padding-left: 8px;
+}
+
+/* Right column (page content) */
+.right {
+  flex: 67%;
+
+ 
+}
+
+/* Style the search box */
+.mySearch {
+  width: 100%;
+  font-size: 18px;
+  padding: 11px;
+  border: 1px solid #ddd;
+}
+
+/* Style the navigation menu inside the left column */
+.myMenu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  padding-top:20px;
+}
+
+/* List Scroll */
+.my-custom-scrollbar {
+  position: relative;
+  width: 900px;
+  height: 720px;
+  overflow: auto;
+  
+}
+
+.myMenu li a {
+  padding: 12px;
+  text-decoration: none;
+  color: white;
+  display: block;
+  
+}
+
+.myMenu li a:hover {
+  background-color: #aaa;
+  color:Black
+}
+
+/* Loader */
+ #loader { 
+           position: fixed;
+	        left: 0px;
+	        top: 0px;
+	        width: 100%;
+	        height: 100%;
+	        z-index: 9999;
+	        background: url(https://smallenvelop.com/wp-content/uploads/2014/08/Preloader_11.gif) center no-repeat #fff;
+        } 
+          
+        @keyframes spin { 
+            100% { 
+                transform: rotate(360deg); 
+            } 
+        } 
+          
+        .center { 
+            position: absolute; 
+            top: 0; 
+            bottom: 0; 
+            left: 0; 
+            right: 0; 
+            margin: auto; 
+        } 

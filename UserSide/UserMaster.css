@@ -1,0 +1,71 @@
+﻿
+.title {
+    margin: auto;
+    height: 100px;
+    background-color:#2B547E;
+   overflow:hidden;
+    text-align: Center;
+    color: #fff;
+  
+}
+
+.footer {
+    margin: 0px -15px 0px -15px;
+ 
+    position: relative;
+    background-color: #2B547E;
+    min-height:110px;
+    color: white;
+    margin:auto;
+}
+.navbar
+{
+    background-color:#974478;
+    
+}
+.mycontent {    
+    
+    min-height:430px;
+    overflow:hidden;
+}
+
+.Fa
+{
+   
+ color:White;
+}
+.Fa:hover
+{
+     
+   text-decoration:underline; 
+   color:white;
+   font-size:18px;
+}  
+
+ 
+
+ .nav-link, .header_area .navbar .nav .nav-item .nav-link
+{
+            color:white;
+            text-decoration:none;
+            margin-left :10px;
+            display:block;
+            padding:10px;
+            font-size:16px;
+}
+        
+ .nav-link:hover, .header_area .navbar .nav .nav-item .nav-link
+{
+            background-color:#98AFC7;
+            text-decoration:none;
+            color:Black;
+           
+}
+.active 
+{
+            background-color:#98AFC7;
+           color:black;
+           font-variant:small-caps;
+            
+}
+ 

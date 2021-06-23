@@ -1,0 +1,106 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="AdminSide_Admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Eduvista Institute</title>
+     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="icon" href="../Images/Favicon.jpg" type="image/png">
+    <link href="AdminMaster.css" rel="stylesheet" type="text/css" />
+       <link href="../bootstrap-4.3.1-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../bootstrap-4.3.1-dist/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="../bootstrap-4.3.1-dist/js/jquery.js" type="text/javascript"></script>
+    <link href="../bootstrap-4.3.1-dist/css/datatables.css" rel="stylesheet" type="text/css" />
+    <script src="../bootstrap-4.3.1-dist/js/datatables.js" type="text/javascript"></script>
+    <link href="../bootstrap-4.3.1-dist/fonts/font-awesome-4.7.0/css/font-awesome.min.css"  rel="stylesheet" type="text/css" />
+    <script src="../bootstrap-4.3.1-dist/js/bootstrap.js" type="text/javascript"></script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+      
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+         <div id="loader" class="center "></div> 
+        <div class="row" style="width:101%;height:100%">   
+        
+            <div class="left my-custom-scrollbar my-custom-scrollbar-primary" style="background-color:#25383C;padding-left :20px; color:White;">
+                    <div>  
+                                      <img src="../Images/Logo.jpg"  style="border-radius:70px ;margin-left  :20px" height="100px" width="200px" />
+                    </div>
+
+               
+    
+                        <ul id="" class="myMenu "  >
+                          <li><a href="Country.aspx">Country</a></li>
+                          <li ><a href="Student.aspx">Student Details</a></li>
+                          <li><a href="Result.aspx">IELTS Result </a></li>
+                          <li><a href="News.aspx">News Feed</a></li>
+                          <li><a href="Contact.aspx">Contact Us</a></li>
+                          <li><a href="ChangePass.aspx" class="li-modal">Change Password</a></li>
+                        
+
+                       
+                        </ul>
+                        
+                <div style="margin-top:250px;padding-left:10px ">
+                <span style="padding-top:10px"><i class="fa fa-copyright" aria-hidden="true"></i> Created By Harshil Dalal</span>
+                </div>
+             </div>
+
+              <div class="right my-custom-scrollbar my-custom-scrollbar-primary" style="background-color:#004d4066;">
+               <div style="background-color:#25383C;margin-left :0px;height:50px;width:100%">
+                    
+                      
+                    
+                    <div style="color:#fff;margin-left:1000px;" >
+                        <div ><h5 style="padding-top:10px"><i class="fa fa-user" aria-hidden="true"></i> <%= Session["AdminName"] %>&nbsp;   
+                        <span><a  style="color:#fff" href="LogOut.aspx"><i class="fa fa-sign-out" aria-hidden="true"></i>(Log Out)</a></span> </h5>
+                        
+                        </div>
+                     </div>
+             </div>
+
+                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+                </asp:ContentPlaceHolder>
+            </div>               
+      </div>
+           
+   </div>
+    </form>
+     <script>
+         document.onreadystatechange = function () {
+             if (document.readyState !== "complete") {
+                 document.querySelector(
+                  "body").style.visibility = "hidden";
+                 document.querySelector(
+                  "#loader").style.visibility = "visible";
+             } else {
+                 document.querySelector(
+                  "#loader").style.display = "none";
+                 document.querySelector(
+                  "body").style.visibility = "visible";
+             }
+         }; 
+
+    </script> 
+       <div id="theModal" class="modal fade  text-center " role="dialog">
+                        <div class="modal-dialog">
+                          <div class="modal-content" >
+                          </div>
+                        </div>
+                     
+                       <script>
+                           $('.li-modal').on('click', function (e) {
+                               e.preventDefault();
+                               $('#theModal').modal('show').find('.modal-content').load($(this).attr('href'));
+                           });
+
+                      </script>
+         </div>
+</body>
+</html>
